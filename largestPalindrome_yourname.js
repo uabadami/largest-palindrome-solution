@@ -5,7 +5,7 @@
 // NOTE: Assume all inputs are valid (0 < N < 8)
 
 // DIRECTIONS:
-//  0. Obtain this file from https://github.com/ankur-cp/largest_palindrome_solution
+//  0. Obtain this file from https://github.com/ankur-cp/largest-palindrome-solution
 //  1. Rename this file, substituting "yourname" with your name
 //  2. Replace "yourname" with your name in the variable below
 exports.name = "yourname";
@@ -51,6 +51,7 @@ const N = 3;
 
 // CHALLENGE: Can you optimize the algorithm above so that works for input values N=4, N=5, N=6 in a "reasonable" amount of time?
 
+// N=1, correct output = 9
 // N=2, correct output = 9009
 // N=3, correct output = 906609
 // N=4, correct output = 99000099
