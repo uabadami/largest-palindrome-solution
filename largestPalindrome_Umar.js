@@ -29,22 +29,19 @@ exports.getLargestPalindrome = (N) => {
   //   for (let j = 10 ** (N - 1); j < 10 ** N; j++) {
 
   // iterate through range of multiplicands
-  for (let i = (10 ** (N - 1)) * 9; i < 10 ** N; i++) {
+  for (let i = 10 ** N; i > (10 ** (N - 1)) * 9; i--) {
+  // for (let i = (10 ** (N - 1)) * 9; i < 10 ** N; i++) {
       
-    for (let j = (10 ** (N - 1)) * 9; j < 10 ** N; j++) {
+    for (let j = 10 ** N; j > (10 ** (N - 1)) * 9; j--) {
 
-      // check if the product is a palindrome
-      if (isPalindrome(i * j)) {
-
-        // check if it's larger than our largest palindrome
-        if (i * j > largestPalindrome) {
+      if (i * j > largestPalindrome && isPalindrome(i * j)) {
                   
           // update largest palindrome
           largestPalindrome = i * j;
         }
       }
     }
-  }
+  
 
   // return result
   return largestPalindrome;
