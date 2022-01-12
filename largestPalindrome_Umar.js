@@ -8,7 +8,7 @@
 //  0. Obtain this file from https://github.com/ankur-cp/largest-palindrome-solution
 //  1. Rename this file, substituting "yourname" with your name
 //  2. Replace "yourname" with your name in the variable below
-exports.name = "yourname";
+exports.name = "Umar";
 //  3. Add your optimizations to the solution below
 //  4. Submit a pull request
 
@@ -24,10 +24,14 @@ exports.getLargestPalindrome = (N) => {
 
   let largestPalindrome = 0;
 
-  // iterate through range of multiplicands
-  for (let i = 10 ** (N - 1); i < 10 ** N; i++) {
+  // for (let i = 10 ** (N - 1); i < 10 ** N; i++) {
       
-    for (let j = 10 ** (N - 1); j < 10 ** N; j++) {
+  //   for (let j = 10 ** (N - 1); j < 10 ** N; j++) {
+
+  // iterate through range of multiplicands
+  for (let i = (10 ** (N - 1)) * 9; i < 10 ** N; i++) {
+      
+    for (let j = (10 ** (N - 1)) * 9; j < 10 ** N; j++) {
 
       // check if the product is a palindrome
       if (isPalindrome(i * j)) {
@@ -47,7 +51,7 @@ exports.getLargestPalindrome = (N) => {
 }
 
 // input
-const N = 3;
+const N = 4;
 
 // CHALLENGE: Can you optimize the algorithm above so that works for input values N=4, N=5, N=6 in a "reasonable" amount of time?
 
